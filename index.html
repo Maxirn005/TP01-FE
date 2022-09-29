@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Document</title>
+    <script type="text/javascript" src="button.js"></script>
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -51,7 +50,12 @@
         width: 100%;
         /* con background fixed dejamos fija la imagen de fondo para TODA la pagina */
         background: fixed;
-        background-image: url("images/PLWALL.jpg");
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url("images/PLWALL.jpg");
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -65,7 +69,12 @@
         width: 100%;
         /* con background fixed dejamos fija la imagen de fondo para TODA la pagina */
         background: fixed;
-        background-image: url("images/PLWALL.jpg");
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url("images/PLWALL.jpg");
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -73,11 +82,12 @@
         background-position: center center;
       }
       /* //////////////////////////////////////////// */
-      /* POWER LIFTING */
+      /* MOVIMIENTOS */
       /* //////////////////////////////////////////// */
       .division {
+        outline: 4px solid orangered;
         width: 100%;
-        height: 500px;
+        height: 1000px;
         outline-offset: -4px;
         /* outline: 4px solid orangered; */
         display: flex;
@@ -101,6 +111,7 @@
       }
 
       .contenedor {
+        /* outline: 4px solid yellow; */
         width: 50%;
         /* overflow: hidden; */
         padding: 1rem;
@@ -114,34 +125,56 @@
 
       .texto-power-lifting {
         height: 90%;
+        font-size: 22px;
         color: aliceblue;
-        text-shadow: -2px -2px 1px black;
-
+        text-align: center;
+        /* text-shadow: -2px -2px 1px black; */
       }
 
       .imagen-power-lifting {
-        /* outline: 3px solid blue; */
-        width: 70%;
+        position: relative;
+        max-width: 430px;
       }
       .imagen-power-lifting img {
-        /* outline: 4px solid yellow; */
-        border-radius: 10px;
         width: 100%;
-        -webkit-box-shadow: 0px 0px 5px 5px rgb(201, 194, 194);
-        -moz-box-shadow: -0px 0px 5px 5px rgb(201, 194, 194);
-        box-shadow: 0px 0px 5px 5px rgb(201, 194, 194);
+      }
+      .hovercap {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+      }
+      .hovercap {
+        visibility: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .imagen-power-lifting:hover .hovercap {
+        visibility: visible;
+        opacity: 1;
       }
       /* //////////////////////////////////////////// */
       /* BOTON ARRIBA */
       /* //////////////////////////////////////////// */
-      #arriba {
+      #botontop {
+        font-size: 18px;
         position: fixed;
-        top: 25rem;
-        left: 3rem;
+        top: 53rem;
+        right: 3rem;
         border: none;
         padding: 0.5rem 1rem;
-        border-radius: 10px;
-        outline: 2px solid red;
+        border-radius: 4px;
+        outline: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+      }
+      #botontop:hover {
+        background-color: #555;
       }
     </style>
   </head>
@@ -156,32 +189,92 @@
 
     <div class="main-section">
       <div class="division">
-        <h2 id="parrafo" class="parrafo">power lifting</h2>
+        <h1 id="parrafo" class="parrafo">MOVIMIENTOS</h1>
         <div class="contenedor texto-power-lifting">
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
-            quasi, veritatis id nulla cupiditate debitis eos nemo laborum ea
-            dolor fugit adipisci vitae blanditiis, dignissimos eum
-            necessitatibus quis quidem assumenda.
+            La IPF reconoce estos movimientos realizados en las competiciones
+            reguladas por la misma (3):
+            <br />Ejercicio de sentadilla <br />Press de banca <br />Peso muerto
+            o deadlift <br />Estos ejercicios se realizan en este orden y cada
+            participante tiene 3 intentos en cada uno de ellos para realizar un
+            levantamiento que sea considerado válido.Los mejores intentos
+            válidos serán los que se cuenten en cada movimiento y todos ellos se
+            suman a un total.Con el objetivo de determinar el/la mejor
+            levantador/a de una forma objetiva, la IPF equipara el resultado
+            obtenido respecto a su peso corporal y el total de los 3
+            levantamientos utilizando la fórmula de Wilks, estableciéndose así
+            una puntuación que determine quién es el/la ganador/a del
+            campeonato.
           </p>
         </div>
 
         <div class="contenedor contenedor-imagenes-power-lifting">
           <div class="imagen-power-lifting">
+            <img src="images/sentadilla.jpg" />
+            <div class="hovercap">Ejercicio de sentadilla</div>
+          </div>
+          <div class="imagen-power-lifting">
             <img src="images/press-banca-1.jpg" />
+            <div class="hovercap">Press de banca</div>
           </div>
           <div class="imagen-power-lifting">
             <img src="images/peso-muerto-1.jpg" />
+            <div class="hovercap">Peso muerto o deadlift</div>
           </div>
         </div>
       </div>
     </div>
 
-    <button id="arriba">Arriba</button>
-
+    <button onclick="topFunction()" id="botontop" title="Ir Arriba">Top</button>
     <div class="section">
-      <div class="division">
-        <h2 class="parrafo">Tipos de powerlifting</h2>
+
+        <div class="contenedor texto-power-lifting">
+            
+          <h1 class="u-align-center u-text u-text-default u-title u-text-1">
+            <br />
+            CATEGORIAS<br />
+          </h1>
+          <p class="u-align-center u-large-text u-text u-text-variant u-text-2">
+            Para clasificar a los/las participantes de la forma más justa
+            posible para que compitan en igualdad de condiciones, la IPF
+            establece diferentes categorías en función de (4):<br />
+            Modalidad - Sexo - Edad - Peso
+            <br />
+            <br />
+            
+            <span style="font-weight: 700">Modalidad</span>
+            <br />Existen 2 modalidades de competición de powerlifting: clásico
+            (raw) o equipado. La principal diferencia entre ambas modalidades es
+            el material que se permite utilizar en cada una de ellas.En la
+            categoría "raw" se permite el uso de cinturón, muñequeras y
+            rodilleras.En la categoría "equipado" está permitido el uso de traje
+            soportivo, camiseta soportiva y vendajes específicos que en la
+            categoría raw o classi no se permiten.<br />
+            <br />
+            <span style="font-weight: 700">Sexo</span>
+            <br />Hombres y mujeres compiten en categorías diferentes.<br />
+            <br />
+            <span style="font-weight: 700">Edad</span>
+            <br />La IPF establece la siguientes divisiones o categorías por
+            edad pudiéndose adaptar por cada federación nacional:Absoluto o
+            open: desde el día que se cumple 14 años en adelante (sin más
+            limitaciones).<br />Sub-junior: desde el día que se cumple 14 años y
+            hasta finalizar el año natural donde se cumpla 18 años.<br />Junior:
+            desde el 1 de enero del año natural en el que cumpla 19 años y hasta
+            finalizar el año natural en el<br />que cumpla 23 años.<br />Master
+            I: desde el 1 de enero del año natural en el que cumpla 40 años y
+            hasta finalizar el año natural en el<br />que cumpla 49 años.<br />Master
+            II…IV: existen diferentes categorías máster en franjas de 10
+            años.<br />
+            <br />
+            <span style="font-weight: 700">Peso</span>
+            <br />La última categorización se realiza en función del peso
+            corporal, estableciéndose diferentes subdivisiones en hombres y
+            mujeres:Hombres (en kg.): menos de 59, 66, 74, 83, 93, 105, 120 y
+            más de 120.<br />Mujeres (en kg.): menos de 47, 52, 57, 63, 69, 72,
+            76, 84 y más de 84.
+          </p>
+        </div>
       </div>
     </div>
   </body>
