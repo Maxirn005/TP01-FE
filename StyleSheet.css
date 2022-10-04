@@ -1,0 +1,167 @@
+      /* MAIN SECTION */
+      .main-section {
+        height: 100%;
+        width: 100%;
+        /* con background fixed dejamos fija la imagen de fondo para TODA la pagina */
+        background: fixed;
+        background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)),
+          url("images/PLWALL.jpg");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        background-position: center center;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+
+
+      .section {
+        height: 100%;
+        width: 100%;
+        background: fixed;
+        background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)),
+          url("images/PLWALL.jpg");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+      }
+
+
+      /* POWERLIFTING */
+      .division_powerlifting {
+        height: 1250px;
+        outline-offset: -4px;
+      }
+
+
+      /* MOVIMIENTOS */
+      .division_movimientos {
+        /* outline: 4px solid orangered; */
+        width: 100%;
+        height: 1000px;
+        outline-offset: -4px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* CATEGORIAS */
+      .division_categorias {
+        width: 100%;
+        height: 1000px;
+        outline-offset: -4px;
+        margin-top: -35px;
+      }
+
+      .parrafo {
+        width: 100%;
+        padding: 0.5rem;
+        /* outline: 2px solid red; */
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        text-shadow: -2px 2px 2px black;
+      }
+
+      .contenedor_powerlifting {
+        padding: 20rem;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .contenedor_movimientos {
+        /* outline: 4px solid yellow; */
+        width: 50%;
+        padding: 1rem;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .contenedor_categorias {
+        /* outline: 4px solid yellow; */
+        padding: 2rem;
+        height: 0%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .texto-powerlifting {
+        height: 90%;
+        font-size: 40px;
+        color: aliceblue;
+        text-align: center;
+        /* text-shadow: -2px -2px 1px black; */
+      }
+
+      .texto-contenedores {
+        height: 90%;
+        font-size: 22px;
+        color: aliceblue;
+        text-align: center;
+      }
+
+      .imagen-power-lifting {
+        position: relative;
+        max-width: 430px;
+      }
+
+      .imagen-power-lifting img {
+        width: 100%;
+      }
+
+      .hovercap {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+      }
+
+      .hovercap {
+        visibility: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .imagen-power-lifting:hover .hovercap {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      /* BOTON TOP */
+      #botontop {
+        font-size: 20px;
+        position: fixed;
+        top: 68rem;
+        right: 3rem;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        outline: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+      }
+
+      #botontop:hover {
+        background-color: #555;
+      }
