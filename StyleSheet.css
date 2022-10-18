@@ -217,18 +217,18 @@
 /* MEDIA QUERY TABLET///////////////////////////////////////*/
 /* ////////////////////////////////////////////////////////*/
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .animacion_powerlifting {
     font-size: 50px;
   }
 
   .contenedor_powerlifting {
-    padding: 5rem;
+    padding: 4rem;
     font-size: 30px;
   }
 
   .contenedor_categorias {
-    padding: 0 5rem 2rem 3rem;
+    padding: 0 1rem 2rem 1rem;
   }
 }
 
@@ -238,7 +238,7 @@
 /* MEDIA QUERY SMARTPHONES//////////////////////////////////*/
 /* ////////////////////////////////////////////////////////*/
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
 
   /* SECCION POWERLIFTING */
   .contenedor_powerlifting {
