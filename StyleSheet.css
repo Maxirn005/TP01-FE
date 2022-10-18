@@ -1,4 +1,6 @@
-/* MAIN SECTION */
+/* ///////////////////////////////////////////////////////////*/
+/* MAIN SECTION//////////////////////////////////////////////*/
+/* /////////////////////////////////////////////////////////*/
 .main-section {
   height: 100%;
   width: 100%;
@@ -38,6 +40,54 @@
   background-position: center center;
 }
 
+.parrafo {
+  width: 100%;
+  padding: 0.5rem;
+  /* outline: 2px solid red; */
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: -2px 2px 2px black;
+  margin-bottom: 5rem;
+}
+
+/* ///////////////////////////////////////////////////////////*/
+/* POWERLIFTING//////////////////////////////////////////////*/
+/* /////////////////////////////////////////////////////////*/
+.division_powerlifting {
+  /* outline: 4px solid rgb(4, 0, 255); */
+  outline-offset: -4px;
+}
+
+.contenedor_powerlifting {
+  /* outline: 4px solid red; */
+  padding: rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-powerlifting {
+  height: 90%;
+  font-size: 40px;
+  color: aliceblue;
+  text-align: center;
+  padding: 20rem;
+}
+
+.texto-powerlifting-shadow {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.imagen-power-lifting {
+  position: relative;
+  max-width: 430px;
+}
+
+.imagen-power-lifting img {
+  width: 100%;
+}
+
 /* ANIMACION TITULO POWERLIFTING */
 .animacion_powerlifting {
   text-transform: uppercase;
@@ -67,59 +117,18 @@
   }
 }
 
-.parrafo {
-  width: 100%;
-  padding: 0.5rem;
-  /* outline: 2px solid red; */
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-  text-shadow: -2px 2px 2px black;
-  margin-bottom: 5rem;
-}
 
-/* POWERLIFTING */
-.division_powerlifting {
-  /* outline: 4px solid rgb(4, 0, 255); */
-  outline-offset: -4px;
-}
 
-.contenedor_powerlifting {
-  /* outline: 4px solid red; */
-  padding: rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.texto-powerlifting {
-  height: 90%;
-  font-size: 40px;
-  color: aliceblue;
-  text-align: center;
-  padding: 20rem;
-}
-
-.texto-powerlifting-shadow {
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-}
-
-/* MOVIMIENTOS */
+/* ///////////////////////////////////////////////////////// */
+/* MOVIMIENTOS///////////////////////////////////////////////*/
+/* ///////////////////////////////////////////////////////// */
 .division_movimientos {
   /* outline: 4px solid orangered; */
   width: 100%;
   outline-offset: -4px;
   display: flex;
   flex-wrap: wrap;
-
 }
-
-/* CATEGORIAS */
-.division_categorias {
-  width: 100%;
-
-}
-
 
 .contenedor_movimientos {
   /* outline: 4px solid yellow; */
@@ -131,6 +140,15 @@
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
+}
+
+
+
+/* ///////////////////////////////////////////////////////// */
+/* CATEGORIAS/////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////// */
+.division_categorias {
+  width: 100%;
 }
 
 .contenedor_categorias {
@@ -148,16 +166,6 @@
   color: aliceblue;
   text-align: center;
 }
-
-.imagen-power-lifting {
-  position: relative;
-  max-width: 430px;
-}
-
-.imagen-power-lifting img {
-  width: 100%;
-}
-
 .hovercap {
   box-sizing: border-box;
   width: 100%;
@@ -180,7 +188,11 @@
   opacity: 1;
 }
 
-/* BOTON TOP */
+
+
+/* //////////////////////////////////////////////////////////*/
+/* BOTON TOP////////////////////////////////////////////////*/
+/* ////////////////////////////////////////////////////////*/
 #botontop {
   font-size: 20px;
   position: fixed;
@@ -199,11 +211,13 @@
   background-color: #555;
 }
 
-/* /////////////////// */
-/* MEDIA QUERY TABLET */
-/* /////////////////// */
 
-@media (max-width: 700px) {
+
+/* //////////////////////////////////////////////////////////*/
+/* MEDIA QUERY TABLET///////////////////////////////////////*/
+/* ////////////////////////////////////////////////////////*/
+
+@media (max-width: 768px) {
   .animacion_powerlifting {
     font-size: 50px;
   }
@@ -212,11 +226,17 @@
     padding: 5rem;
     font-size: 30px;
   }
+
+  .contenedor_categorias {
+    padding: 0 5rem 2rem 3rem;
+  }
 }
 
-/* /////////////////// */
-/* MEDIA QUERY CELULAR */
-/* /////////////////// */
+
+
+/* //////////////////////////////////////////////////////////*/
+/* MEDIA QUERY SMARTPHONES//////////////////////////////////*/
+/* ////////////////////////////////////////////////////////*/
 
 @media (max-width: 450px) {
 
@@ -240,8 +260,7 @@
   .parrafo {
     margin-bottom: 0rem;
   }
-
-  /* SECCION CATEGORIAS */
+x
   .contenedor_categorias {
 
     padding: 0 2rem 2rem 2rem;
